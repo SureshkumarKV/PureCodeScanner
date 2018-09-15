@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Pure code scanner"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:autoLink="web"
+        android:layout_marginBottom="10dp"
+        android:textColorLink="@color/colorAccent"
+        android:text="Pure code scanner is a QR and bar code scanner that is light, fast, free, offline and ad-free. It is powered by Google's Mobile Vision API(https://developers.google.com/vision/) and supports a wide range of QR and bar code formats."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:autoLink="web"
+        android:layout_marginBottom="10dp"
+        android:textColorLink="@color/colorAccent"
+        android:text="Pure QR code scanner is open source too. You can get the latest code from GitHub at: http://github.com/SureshkumarKV/PureCodeScanner"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:layout_marginBottom="10dp"
+        android:autoLink="web"
+        android:textColorLink="@color/colorAccent"
+        android:text="If you like this app, please don't forget giving it a nice review in PlayStore at: https://play.google.com/store/apps/details?id=in.sureshkumarkv.purecodescanner"/>
+</LinearLayout>

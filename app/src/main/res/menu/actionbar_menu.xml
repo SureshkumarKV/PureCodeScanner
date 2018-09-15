@@ -1,0 +1,13 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/id_flashlight"
+        android:icon="@drawable/flashlight"
+        app:showAsAction="always"
+        android:title=""/>
+
+    <item android:id="@+id/id_information"
+        android:icon="@drawable/information"
+        app:showAsAction="always"
+        android:title=""/>
+</menu>
