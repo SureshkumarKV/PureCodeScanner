@@ -282,8 +282,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onDestroy() {
+        super.onDestroy();
         closeCamera();
         closeBackgroundThread();
     }
@@ -305,12 +305,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void openCamera() {
         try {
+            //Make sure to create mImageReader before opening camera. Otherwise, since we are using a background thread for camera callbacks, it it may fire 'onOpened' before mImageReader is assigned with.
+            mImageReader = ImageReader.newInstance(previewSize.getWidth()/4, previewSize.getHeight()/4, ImageFormat.YUV_420_888, 2);
+            mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, backgroundHandler);
+
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                 cameraManager.openCamera(cameraId, stateCallback, backgroundHandler);
             }
-
-            mImageReader = ImageReader.newInstance(previewSize.getWidth()/4, previewSize.getHeight()/4, ImageFormat.YUV_420_888, 2);
-            mImageReader.setOnImageAvailableListener(mOnImageAvailableListener, backgroundHandler);
 
         } catch (CameraAccessException e) {
             e.printStackTrace();
